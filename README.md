@@ -22,20 +22,20 @@ The modelling is intentionally kept simple and does not look into topics like...
 Please let me know there are certain topics you would like to discuss or see more evidence of.
 
 # Model pipeline order
-pull_data
-    ↓
-process_data
-    ↓
-train_model
-    ↓
-log_model           (not implemented)
-    ↓
+pull_data<br />
+    ↓<br />
+process_data<br />
+    ↓<br />
+train_model<br />
+    ↓<br />
+log_model           (not implemented)<br />
+    ↓<br />
 deploy_model        (not implemented)
 
 
 # Folder Structure
 
-root/
+
     - data/                                 (Used to store outputs e.g. Ingested data. Exclude from commits.)
     - notebooks/                            (Experimentation/one-off scripts written in notebooks. Main code base for this example.)
         - scratch_pull_data.ipynb
