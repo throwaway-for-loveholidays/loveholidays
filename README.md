@@ -17,11 +17,26 @@ The modelling is intentionally kept simple, and no Hyperparameter tuning work wa
 
 Please let me know there are certain topics you would like to discuss or see more evidence of.
 
+# Model pipeline order
+pull_data
+    ↓
+process_data
+    ↓
+train_model
+    ↓
+log_model           (not implemented)
+    ↓
+deploy_model        (not implemented)
+
+
 # Folder Structure
 
 root/
     - data/                                 (Used to store outputs e.g. Ingested data. Exclude from commits.)
-    - notebooks/                            (Experimentation/one-off scripts written in notebooks)
+    - notebooks/                            (Experimentation/one-off scripts written in notebooks. Main code base for this example.)
+        - scratch_pull_data.ipynb
+        - scratch_process_data.ipynb
+        - scratch_train_model.ipynb
 
     - requirements/                         (Requirements files)
         - actual_demo_requirements.txt      (A single requirement file to execute notebooks developed for the demo. Usually would setup one file per step.)
