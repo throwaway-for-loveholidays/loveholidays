@@ -1,0 +1,58 @@
+# This is an example of Valohai-based MLOPs workflow. Does not actually run.
+
+######### STEPS #########
+# Each step is a process within the Machine Learning pipeline.
+
+- step:
+  name: pull_data
+  image: python:3.11
+  environment: r6i-2xlarge # An AWS example
+  command:
+    - pip install -r requirements/pull_data.txt
+    - python src/pull_data.py {parameters}
+  parameters:
+    - name: end_date # Last date to pull data from
+      type: string
+    - name: days # Days to pull data for
+      type: integer
+
+- step:
+  name: process_data
+  image: python:3.11
+  environment: r6i-2xlarge # An AWS example
+  command:
+    - pip install -r requirements/process_data.txt
+    - python src/process_data.py {parameters}
+  inputs: # Files that are imported into the step
+    - name: model_data
+  parameters:
+    - name: output_data     # Output data path
+      type: string
+      optional: false
+    - name: target_column   # Name of the column the we predict on
+      default: "relevance"
+    - name: train_days      # Number of days to train the model on
+      type: integer
+    - name: test_days       # Number of days to test the model on
+      type: integer
+    - name: val_days        # Number of days to validate the model on
+      type: integer
+
+# ... and so on.
+
+######### PIPELINES #########
+# Each pipeline is a sequent of steps
+
+- pipeline:
+  name: full_pipeline
+  nodes: # Used to define the steps used in this pipeline.
+    - pull_data
+    - process_data
+    - train_model
+    - log_model
+    - deploy_model
+  edges: # Used to establish the DAG. _very_ simplified from the actual code.
+    - pull_data -> process_data
+    - process_data -> train_model
+    - train_model -> log_model
+    - log_model -> deploy_model
