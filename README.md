@@ -14,11 +14,11 @@ The project is designed to illustrate best practices for ML pipeline development
 That being said, the majority of for this task was put in creation of the presentation. As there is limited time to curate a reasonable sample dataset and ML pipeline, **the demo code is only written and stored in python notebooks, and not in the individual python files in the src folder.**
 
 The modelling is intentionally kept simple and does not look into topics like...
+
     - Pre-commit, CI/CD
     - Exception handling (esp. for model training failures)
     - Model versioning and monitoring
     - Scalability
-
 Please let me know there are certain topics you would like to discuss or see more evidence of.
 
 # Model pipeline order
