@@ -46,16 +46,16 @@ root/
         - log_model.txt                     (Empty)
         - deploy_model.txt                  (Empty)
 
-    - src/                                  (Contains all python codes)
-                                
+    - src/                                  (Contains all python codes)               
         - utils/                            (Contains utility/helper functions)
             - utils.py                      
-
         - pull_data.py                      (Empty)
         - process_data.py                   (Empty)
         - train_model.py                    (Empty)
         - log_model.py                      (Empty)
         - deploy_model.py                   (Empty)
 
+    - config.yaml                           (Contains model specification)
     - mlops.yaml                            (A mock MLOPs specification file based on Valohai)
     - README.md                             (This document)
+    - .gitignore

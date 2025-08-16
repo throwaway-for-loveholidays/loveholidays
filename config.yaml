@@ -1,0 +1,32 @@
+non_feature_cols: [
+  "query_id", 
+  "product_code",
+]
+
+target_col: "clicked"
+
+float_cols: [
+  "ctr_14d",
+  "ctr_30d",
+  "device_prodcat_mean_encoded",
+  "language_prodcat_mean_encoded",
+]
+
+integer_cols: [
+  "duration",
+]
+
+categorical_cols: [
+  "product_category",
+]
+
+hyperparameters: # Placeholder values. Subject to HPO
+  importance_type: gain
+  n_estimators: 100
+  reg_alpha: 0.5
+  reg_lambda: 0.5
+  colsample_bytree: 1.0
+  subsample: 1.0
+  learning_rate: 0.1
+  max_depth: 6
+  num_leaves: 20
