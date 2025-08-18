@@ -1,9 +1,7 @@
-
-
 # Python 3.11
 # Conda supports specification of python version in a yaml file but not using to avoid potential commercial agreement issues (even though we could probably just avoid using the default channel)
 # Ideally I would have enquired with the team before deciding on pip/conda/uv, in a formal business project.
-pandas==2.3.1
-scikit-learn==1.7.1
+pandas==2.2.2
+scikit-learn==1.6.1
 lightgbm==4.6.0
 pyyaml==6.0.2
