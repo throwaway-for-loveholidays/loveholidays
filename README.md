@@ -2,7 +2,7 @@
 
 This project demonstrates a Learning to Rank (LTR) machine learning pipeline using a structured approach. 
 
-The demo showcases the complete workflow from data ingestion to model deployment, organized in a modular fashion that would typically be used in production environments.
+The demo showcases the complete workflow from data ingestion to model deployment, organised in a modular fashion that would typically be used in production environments.
 
 The project is designed to illustrate best practices for ML pipeline development, including:
 - Modular code organisation with separate stages for data processing, model training, and deployment
@@ -11,7 +11,7 @@ The project is designed to illustrate best practices for ML pipeline development
 - MLOps configuration for automated workflow orchestration
 - Clear separation between experimentation (notebooks) and production code (src)
 
-That being said, the majority of for this task was put in creation of the presentation. As there is limited time to curate a reasonable sample dataset and ML pipeline, **the demo code is only written and stored in python notebooks, and not in the individual python files in the src folder.**
+That being said, the majority of this task was put in creation of the presentation. As there is limited time to curate a reasonable sample dataset and ML pipeline, **the demo code is only written and stored in python notebooks, and not in the individual python files in the src folder.**
 
 The modelling is intentionally kept simple and does not look into topics like...
 
@@ -19,7 +19,7 @@ The modelling is intentionally kept simple and does not look into topics like...
     - Exception handling (esp. for model training failures)
     - Model versioning and monitoring
     - Scalability
-Please let me know there are certain topics you would like to discuss or see more evidence of.
+Please let me know if there are certain topics you would like to discuss or see more evidence of.
 
 # Model pipeline order
 pull_data<br />
